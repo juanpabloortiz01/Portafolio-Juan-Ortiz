@@ -18,8 +18,8 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 
 # Healthcheck to verify the web server is responding
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+HEALTHCHECK --interval=15s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget -qO- http://127.0.0.1/ > /dev/null || exit 1
 
 # Launch Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
