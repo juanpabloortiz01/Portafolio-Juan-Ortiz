@@ -33,6 +33,22 @@ Portafolio web interactivo de Juan Pablo Ortiz con diseño editorial en modo osc
 
 ---
 
+## 🐳 Despliegue con Docker
+
+Para construir y correr el contenedor localmente:
+
+```bash
+# Construir la imagen
+docker build -t portafolio-juan-ortiz .
+
+# Ejecutar el contenedor en el puerto 8080
+docker run -d -p 8080:80 --name portafolio portafolio-juan-ortiz
+```
+
+Luego abre tu navegador en `http://localhost:8080`.
+
+---
+
 ## 📬 Contacto
 
 - **Teléfono:** [0968743698](tel:0968743698)
